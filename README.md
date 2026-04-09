@@ -19,7 +19,7 @@ The dataset used in this work can be obtained from OpenNeuro:
 
 Please download the data from OpenNeuro and place it in the appropriate local directory before running preprocessing or experiments.
 
-This dataset was collected using the same acquisition setup as our previous work, **Chisco**, ensuring consistency in the EEG recording hardware and experimental environment.
+This dataset was collected using the same acquisition setup as our previous work, [Chisco: An EEG-based BCI dataset for decoding of imagined speech](https://www.nature.com/articles/s41597-024-04114-1), ensuring consistency in the EEG recording hardware and experimental environment.
 
 ## EEG Experimental Paradigm
 
