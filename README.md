@@ -19,6 +19,8 @@ The dataset used in this work can be obtained from OpenNeuro:
 
 Please download the data from OpenNeuro and place it in the appropriate local directory before running preprocessing or experiments.
 
+This dataset was collected using the same acquisition setup as our previous work, **Chisco**, ensuring consistency in the EEG recording hardware and experimental environment.
+
 ## EEG Experimental Paradigm
 
 The EEG experiment follows a neuropsychology-inspired repeated inner-speech design.
