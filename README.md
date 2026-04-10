@@ -30,10 +30,19 @@ The EEG experiment follows a neuropsychology-inspired repeated inner-speech desi
 - Each session contains multiple trials
 - Each trial consists of three phases:
   1. **Reading phase**  
-     Participants read a sentence presented word by word
+     Participants first read a target sentence presented **word by word with sequential highlighting** on the screen.  
+     If a sentence contains **x words**, the duration of this phase is **0.4x seconds**.  
+     This phase serves as a controlled language-encoding stage: it standardizes the semantic content to be processed, reduces variability introduced by unconstrained imagination, and primes the participant for the subsequent silent recall stage.
+
   2. **Recall / inner-speech phase**  
-     Participants silently recall the sentence verbatim without speaking aloud
-  3. **Rest phase**
+     After reading, participants are instructed to **silently recall the sentence verbatim without speaking aloud**.  
+     The duration of this phase is **0.4(x + 1) seconds**.  
+     This is the core phase of the paradigm and corresponds to the **inner-speech signal** used in the downstream EEG-to-text analysis. The extra time relative to the reading phase gives participants sufficient time to internally reproduce the sentence in a speech-like manner rather than merely recognize it visually.  
+     The design is motivated by prior work suggesting that imagined speech is embedded within inner speech, and by evidence that speech-related language networks engaged during reading show partial overlap with those involved in speech imagery and internal speech generation. This helps create a smoother transition from visual language processing to covert verbal rehearsal.
+
+  3. **Rest phase**  
+     After the recall stage, a fixation cross is presented and participants enter a **1.8-second rest period**.  
+     This phase separates consecutive trials, reduces carryover from the previous sentence, and provides a short recovery interval before the next stimulus begins. In practice, it helps make trial boundaries cleaner and stabilizes the temporal structure of the EEG recordings.
 
 To reduce the impact of EEG instability, the benchmark includes **within-participant repeated recordings of the same sentences across sessions and days**.  
 EEG signals were recorded using a **128-channel high-density EEG cap**.  
